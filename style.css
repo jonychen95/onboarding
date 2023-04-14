@@ -28,7 +28,7 @@ html,body {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    animation: fade-out 0.5s ease-in-out 1.5s forwards;
+    animation: fade-out 3s ease-in-out 0s forwards;
   }
 
   #loader {
@@ -44,7 +44,17 @@ html,body {
 
 
   @keyframes fade-out {
-    to {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+    65% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
       transform: translate(-50%, -50%) scale(0.8);
       opacity: 0;
     }
